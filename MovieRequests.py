@@ -1,8 +1,9 @@
 import requests
 import csv
 import re
+import CONSTANTS
 def getMovieById(id):
-    params = {'apikey':'9a2d82b8', 'i':id}
+    params = {'apikey':CONSTANTS.omdb_api_key, 'i':id}
     movie = requests.get('https://www.omdbapi.com/', params)
     awardWins = 0
     awardNominations = 0
